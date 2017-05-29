@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if error_msg %}
+    <p>{{ error_msg }}</p>
+{% endif %}
+
+{% for post in postList %}
+  <div>
+    {{ post.body }}
+  </div>
+{% empty %}
+  <div class="no-post">
+    没有搜索到符合条件的文章
+  </div>
+{% endfor %}
+</body>
+</html>
